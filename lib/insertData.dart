@@ -145,12 +145,10 @@ class _InsertDataState extends State<InsertData> {
   }
 
   Future<void> addUser() {
-    return students
-        .add({
-      'name': name,
-      'email': email,
-      'password': password})
-        .then((value) => print('User Added'))
+    return students.add({
+                          'name': name,
+                          'email': email,
+                          'password': password}).then((value) => print('User Added'))
         .catchError((error) => print('Failed to Add user: $error'));
   }
 }
