@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:newfirabse/homePage.dart';
 import 'package:newfirabse/insertData.dart';
 
 Future<void> main() async {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue,),
-      home: InsertData());
+      home: HomePage());
   }
 }
 
