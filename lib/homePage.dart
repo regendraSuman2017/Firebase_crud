@@ -14,10 +14,7 @@ class _HomePageState extends State<HomePage> {
   // For Deleting User
   CollectionReference students = FirebaseFirestore.instance.collection('students');
   Future<void> deleteUser(id) {
-    // print("User Deleted $id");
-    return students
-        .doc(id)
-        .delete()
+    return students.doc(id).delete()
         .then((value) => print('User Deleted'))
         .catchError((error) => print('Failed to Delete user: $error'));
   }
@@ -156,13 +153,13 @@ class _HomePageState extends State<HomePage> {
               children: [
               IconButton(
               onPressed: () => {
-              /* Navigator.push(
+              Navigator.push(
               context,
               MaterialPageRoute(
               builder: (context) => UpdateStudentPage(
               id: storedocs[i]['id']),
               ),
-              )*/
+              )
               },
               icon: Icon(
               Icons.edit,
@@ -171,8 +168,10 @@ class _HomePageState extends State<HomePage> {
               ),
               ),
                 IconButton(
-                  onPressed: () =>
-                  {deleteUser(storedocs[i]['id'])},
+                  onPressed:()
+                  {
+                    deleteUser(storedocs[i]['id']);
+                    },
                   icon: Icon(
                     Icons.delete,
                     color: Colors.red,
