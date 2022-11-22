@@ -153,13 +153,13 @@ class _HomePageState extends State<HomePage> {
               children: [
               IconButton(
               onPressed: () => {
-              /* Navigator.push(
+              Navigator.push(
               context,
               MaterialPageRoute(
               builder: (context) => UpdateStudentPage(
               id: storedocs[i]['id']),
               ),
-              )*/
+              )
               },
               icon: Icon(
               Icons.edit,
